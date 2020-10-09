@@ -23,10 +23,11 @@ public class MyFragmentSettings extends PreferenceFragmentCompat {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         initFields();
         loadFields();
+        loadFields();
         makeFields();
         setPreferenceScreen(screen);
     }
-    
+
     private void initFields() {
         this.context = getPreferenceManager().getContext();
         this.screen = getPreferenceManager().createPreferenceScreen(this.context);
@@ -49,9 +50,9 @@ public class MyFragmentSettings extends PreferenceFragmentCompat {
     }
 
     private void makeFields() {
-        encryptedNotes.setSummaryOff("The notes you save will not be encrypted.(Recommended)");
-        encryptedNotes.setSummaryOn("The notes you save will not be encrypted\nThis may take up too much of your memory");
-        encryptedNotes.setTitle("Encrypted Notes");
+        encryptedNotes.setSummaryOff("The notes will not be read and written encryptly.(Recommended)");
+        encryptedNotes.setSummaryOn("The notes will be read and written encryptly\nThis may take up too much of your memory");
+        encryptedNotes.setTitle("Encrypted Mode");
         encryptedNotes.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -64,6 +65,7 @@ public class MyFragmentSettings extends PreferenceFragmentCompat {
                 return true;
             }
         });
+
         security.setTitle("Encrypted Data");
         screen.addPreference(security);
         security.addPreference(encryptedNotes);

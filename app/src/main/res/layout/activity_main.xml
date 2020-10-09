@@ -27,7 +27,7 @@
         android:ems="10"
         android:gravity="top"
         android:hint="content"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,4 +52,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnReader"
         app:layout_constraintTop_toBottomOf="@+id/etContent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
